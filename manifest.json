@@ -1,0 +1,22 @@
+{
+    "name": "学生ポータルログイン簡略化ツール",
+    "version": "1.0.0",
+    "description": "学生ポータルにエンターキーでログインできるようになる拡張機能です．",
+    "manifest_version": 3,
+    "icons": {
+        "16": "icon/icon16.png",
+        "48": "icon/icon48.png",
+        "128": "icon/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://navi.mars.kanazawa-it.ac.jp/portal/student",
+                "https://navi.mars.kanazawa-it.ac.jp/portal/student/inKITP0000001LoginFailed"
+            ],
+            "js": [
+                "click.js"
+            ]
+        }
+    ]
+}
